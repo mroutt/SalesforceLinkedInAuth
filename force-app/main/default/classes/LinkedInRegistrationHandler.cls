@@ -1,5 +1,5 @@
 /**
-  FaceBook Registration Handler example
+  LinkedIn Registration Handler example
 **/
 global class LinkedInRegistrationHandler implements Auth.RegistrationHandler{
     
@@ -91,7 +91,7 @@ global void updateUser(Id userId, Id portalId, Auth.UserData data){
     /**
      * Create a Contact
      * 
-     * @param data - Facebook provided context for the User
+     * @param data - LinkedIn provided context for the User
      **/
     private Id createContact(Auth.UserData data){
         Contact contact = new Contact();
@@ -119,14 +119,14 @@ global void updateUser(Id userId, Id portalId, Auth.UserData data){
     /**
      * Create and initialize the User but don't save it yet
      * 
-     * @param data - the provided User context from FaceBook
+     * @param data - the provided User context from LinkedIn
      * @param p - the Profile we are going to assign to this user
      * 
      * @return User that has been initialized but not Saved
      **/ 
     private User createUser(Auth.UserData data, Profile p) {
         User u = new User();
-        u.username = data.email + ORG_SUFFIX + 'linkedin';
+        u.username = data.email + ORG_SUFFIX;
         u.email = data.email;
         u.lastName = data.lastName;
         u.firstName = data.firstName;
