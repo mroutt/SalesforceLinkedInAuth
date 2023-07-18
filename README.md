@@ -1,18 +1,25 @@
-# Salesforce DX Project: Next Steps
+# How to use this reference implementation
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+1. Clone this repo to your local computer
 
-## How Do You Plan to Deploy Your Changes?
+2. Create a scratch org using config\project-scratch-def.json
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+3. Update references to [REPLACE_THIS]@example.com in the following locations with your default Scratch Org User:
+	force-app\main\default\authproviders\LinkedIn.authprovider-meta.xml
+	force-app\main\default\sites\Customers.site-meta.xml
 
-## Configure Your Salesforce DX Project
+4. From your terminal window, run sf project deploy start
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+5. In your new Scratch Org, create a new Account called "Customers"
 
-## Read All About It
+6. Add the "Customer User Manager" role to your default Scratch Org User
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+7. In Setup, go to All Sites
+
+8. Click on "Workspaces->Administration->Login & Registration" for the Customers site
+
+9. Under "Select login options to display...", select "LinkedIn" checkbox and Save
+
+10. Go to Experience Builder for the Customers site and Publish the site
+
+11. You should now be able to browse to the Customer site URL using a private/incognito browser window and log in using your LinkedIn credentials.
