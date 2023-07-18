@@ -73,6 +73,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>LinkedInPhotoButtonController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>LinkedInRegistrationHandler</apexClass>
         <enabled>false</enabled>
     </classAccesses>
